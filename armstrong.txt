@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+class Main
+{
+    static int count(int n)
+    {
+        int c=0;
+        while(n>0)
+        {
+        c++;
+        n=n/10;
+        }
+        return c;
+    }
+    
+static int armstrong(int m)
+{
+    int s=0;
+    int z=count(m);
+    while(m>0)
+    {
+        int r=m%10;
+        s=s+(int)Math.pow(r,z);
+        m=m/10;
+    }
+    return s;
+}
+public static void main (String[]args)
+{
+    Scanner sc=new Scanner(System.in);
+    int x=sc.nextInt();
+    if(armstrong(x)==x)
+    {
+        System.out.print("Armstrong");
+    }
+    else
+    {
+        System.out.print("Not Armstrong");
+    }
+    
+}
+}
