@@ -1,0 +1,28 @@
+import java.util.*;
+prime or not:
+import java.io.*;
+public class Main
+{
+  public static void main (String arg[])
+  {
+	Scanner s = new Scanner (System.in);
+	int m = s.nextInt (), count;
+	int n = s.nextInt ();
+	for (int i = m; i < n; i++)
+	  {
+		count = 0;
+		for (int j = 2; j <= i / 2; j++)
+		  {
+			if (i % j == 0)
+			  {
+				count++;
+				break;
+			  }
+		  }
+		if (count == 0 && i > 1)
+		  {
+			System.out.print (i + " ");
+		  }
+	  }
+  }
+}

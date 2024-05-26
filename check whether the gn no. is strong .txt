@@ -1,0 +1,42 @@
+check whether the gn no. is strong or not?
+import java.io.*;
+import java.util.*;
+public class Main
+{
+    static int fact(int d)
+{
+    int f=1;
+    for( int i=1;i<=d;i++){
+        f=f*i;
+    }
+    return f;
+}
+    static int strong(int n)
+    {
+        int r,s=0;
+        while(n>0)
+        {
+        r=n%10;
+        s=s+fact(r);
+        n=n/10;
+        }
+        return s;
+    }
+    
+
+public static void main (String[]args)
+{
+    Scanner sc=new Scanner(System.in);
+    int x=sc.nextInt();
+    if(strong(x)==x)
+    {
+        System.out.print("Strong");
+    }
+    else
+    {
+        System.out.print("Not Strong");
+    }
+    
+}
+}
+

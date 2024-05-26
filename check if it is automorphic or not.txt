@@ -1,0 +1,30 @@
+check if it is automorphic or not 5 is automorphic bcoz its square is 25 and 25 is automorphic if its square is 625:
+import java.util.*;
+import java.io.*;
+public class Main
+{
+     static void auto(int n){
+        int m=n*n;
+        int count=0;
+        int temp=n;
+        while(n>0){
+            n=n/10;
+            count++;
+        }
+        int x=temp%(int)Math.pow(10,count);
+        if(x==temp){
+            System.out.print("Auto");
+        }
+        else{
+            System.out.print("Not auto");
+        }
+     }
+     
+     public static void main(String arg[])
+     {
+         Scanner s=new Scanner(System.in);
+         int x=s.nextInt();
+         auto(x);
+         
+     }
+}
